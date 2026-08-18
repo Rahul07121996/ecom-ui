@@ -7,6 +7,11 @@ function App() {
     const getWeather = async () => {
       const response = await api.get("/WeatherForecast");
       console.log(response.data);
+
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const env = import.meta.env.VITE_ENV;
+      console.log("API Url", apiUrl);
+      console.log("Env", env);
     };
 
     getWeather();
